@@ -14,11 +14,9 @@ Nesse projeto, aprimorei habilidades como:
 
 ---
 
-### Protótipo do projeto
+### Resultado Final:
 
-Seu projeto deve ter o comportamento parecido com o do gif abaixo quando finalizado, **não se preocupe em replicar o visual, o gif so ilustra o comportamento**:
-
-![Project Gif](./out.gif)
+https://user-images.githubusercontent.com/81549048/147434750-8725479d-eceb-4014-a6b8-c4847a258f6b.mp4
 
 ---
 
