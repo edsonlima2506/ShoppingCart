@@ -160,6 +160,7 @@ body {
   flex-basis: 30%;
   flex-flow: column wrap;
   color: white;
+  margin: 30px 25px;
 }
 
 .cart .cart__title {
@@ -170,4 +171,40 @@ body {
 
 .total_cart {
   width: 150px;
+}
+
+.total-price {
+  margin: 20px 0 0 20px;
+  color: rgb(118, 185, 0);
+}
+
+.empty-cart {
+  width: 90%;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 15px;
+  align-self: center;
+  background-color: #E05421;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.empty-cart:hover {
+  background: none;
+  border: 2px solid #E05421;
+  color: #E05421;
+}
+
+.cart__item {
+  margin: 10px 0 10px;
+  background-color: rgba(99, 99, 99, 0.192);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 2px;
+  border-radius: 5px;
+  border: solid 2px white;
 }

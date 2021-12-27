@@ -9,7 +9,7 @@ const items = document.querySelector('.total_cart');
 emptyCart.addEventListener('click', () => {
 cart.innerHTML = '';
 localStorage.clear();
-totalPriceElemet.innerText = 'Preço total: $0';
+totalPriceElemet.innerText = 'Preço total: R$0';
 items.innerText = 'R$0';
 totalPrice = [];
 });
@@ -47,8 +47,10 @@ function createCartItemElement({ sku, name, salePrice }) {
     const totalNumber = totalPrice.reduce((total, numero) => total + numero, 0);
     if (Number.isInteger(totalNumber) === true) {
       totalPriceElemet.innerText = `${totalNumber.toFixed(0) - salePrice}`;
+      items.innerText = `R$${totalNumber - salePrice}`;
      } else {
       totalPriceElemet.innerText = `${Number(totalNumber) - salePrice}`;
+      items.innerText = `R$${totalNumber - salePrice}`;
      }
   });
   savedCart.push(`SKU: ${sku} | NAME: ${name} | PRICE: $${salePrice}`);
