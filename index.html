@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Computer Shop</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <h1 class="loading">loading</h1>
+  
+    <header>
+      <section class="superior_menu">
+        <nav>
+          <a href="#container">Computers</a>
+          <a href="#container">Contact</a>
+        </nav>
+        <img src="./images/progamers.png" alt="logo pro gamers">
+        <div class="cart_header">
+          <img src="./images/cart.png" alt="Carrinho de compras" class="cart_icon"/>
+          <h1 class="total_cart">R$0</h1>
+        </div>
+      </section>
+      <section class="main_content_header">
+        <div class="left_header">
+          <h3>Alta Qualidade</h3>
+          <h1>Pensado para</h1>
+          <h2>Gamers de verdade</h2>
+          <a href="#container">
+            <button>Comprar agora</button>
+          </a>
+        </div>
+        <img src="./images/computador.png" alt="">
+      </section>
+    </header>
+
+    <aside class="container" id="container">
+      <section class="items"></section>
+      <section class="cart">
+        <span class="cart__title">Carrinho de compras</span>
+        <ol class="cart__items"></ol>
+        <span class="total-price">Preço total: 0</span>
+        <button class="empty-cart">Esvaziar carrinho</button>
+      </section>
+    </aside>
+
+    <script src="script.js"></script>
+  </body>
+</html>
