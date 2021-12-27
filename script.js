@@ -33,23 +33,18 @@ function createProductImageElement(imageSource) {
   return img;
 }
 
-function cartItemClickListener(item) {
- const itemClicado = item.target;
- cart.removeChild(itemClicado);
-}
-
 function createCartItemElement({ sku, name, salePrice }) {
   const li = document.createElement('li');
   li.className = 'cart__item';
   li.innerText = `SKU: ${sku} | NAME: ${name} | PRICE: $${salePrice}`;
-  li.addEventListener('click', cartItemClickListener);
+  li.addEventListener('click', ({ target }) =>  cart.removeChild(target));
   li.addEventListener('click', () => {
     const totalNumber = totalPrice.reduce((total, numero) => total + numero, 0);
     if (Number.isInteger(totalNumber) === true) {
-      totalPriceElemet.innerText = `${totalNumber.toFixed(0) - salePrice}`;
+      totalPriceElemet.innerText = `Preço total: R$${totalNumber.toFixed(0) - salePrice}`;
       items.innerText = `R$${totalNumber - salePrice}`;
      } else {
-      totalPriceElemet.innerText = `${Number(totalNumber) - salePrice}`;
+      totalPriceElemet.innerText = `Preço total: R$${Number(totalNumber) - salePrice}`;
       items.innerText = `R$${totalNumber - salePrice}`;
      }
   });
@@ -85,9 +80,9 @@ function createProductItemElement({ id, title, thumbnail }) {
 
   const button = createCustomElement('button', 'item__add', 'Adicionar ao carrinho!', id);
 
+  section.appendChild(createProductImageElement(thumbnail));
   section.appendChild(createCustomElement('span', 'item__sku', id, id));
   section.appendChild(createCustomElement('span', 'item__title', title, id));
-  section.appendChild(createProductImageElement(thumbnail));
   section.appendChild(button);
 
   return section;
